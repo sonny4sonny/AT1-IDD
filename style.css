@@ -1,0 +1,126 @@
+:root {
+  --bg: #193149;
+  --text: #f0ecd3;
+  --accent: #ff573a;
+  --base: 1rem;
+  --scale-ratio: 1.25;
+  --heading: 'Montserrat', sans-serif;
+  --body: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: var(--heading);
+  font-size: calc(var(--base) * var(--scale-ratio) * var(--scale-ratio));
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-family: var(--heading);
+  font-size: calc(var(--base) * var(--scale-ratio));
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--heading);
+  font-size: var(--base);
+  margin-top: 3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 3px;
+  background: var(--accent);
+}
+
+h4 {
+  margin-top: 1.5rem;
+  font-size: calc(var(--base) * var(--scale-ratio) * 0.9);
+  font-weight: 500;
+}
+
+ul {
+  margin: 0.5rem 0 1.5rem 1.5rem;
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
+
+strong {
+  color: var(--accent);
+}
+
+section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(240, 236, 211, 0.2);
+}
+
+/* ——— Terms & Music Modal ——— */
+#terms-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  max-width: 90%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.btn-accept {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--heading);
+  font-size: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-accept:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 3rem;
+  }
+}
